@@ -1,7 +1,6 @@
 import paho.mqtt.client as mqtt
 import time
 import json
-import pygame
 
 MQTT_HOST = "mqtt.eclipse.org" 
 MQTT_PORT = 1883
