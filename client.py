@@ -1,6 +1,7 @@
-import paho.mqtt.client as mqtt #import the client1
+import paho.mqtt.client as mqtt
 import time
 import json
+import pygame
 
 MQTT_HOST = "mqtt.eclipse.org" 
 MQTT_PORT = 1883
@@ -9,7 +10,7 @@ MQTT_MSG=json.dumps({"nick": "Player_1","x":  "10","y": "25"})
 
 
 def on_publish(client, userdata, mid):
-    print(" * Mensagem publicada...")
+    print(" * Mensagem publicada ao broker...")
 
 def on_connect(client, userdata, flags, rc):
     client.subscribe(MQTT_TOPIC)
